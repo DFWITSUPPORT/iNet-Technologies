@@ -27,14 +27,8 @@ export default function BookingModal({ children }: BookingModalProps) {
         
         {/* Calendly Inline Widget Placeholder */}
         <div className="w-full h-[600px] mt-4 bg-card/50 flex items-center justify-center">
-          {/* 
-            To make this real:
-            1. Create a free Calendly account
-            2. Get your booking link (e.g., https://calendly.com/your-name/30min)
-            3. Replace the iframe src below with your link
-          */}
           <iframe 
-            src="https://calendly.com/inet-technologies-placeholder?hide_gdpr_banner=1&background_color=0f172a&text_color=f8fafc&primary_color=3b82f6" 
+            src="https://calendly.com/tim-dfwitexpert/30min?hide_gdpr_banner=1&background_color=0f172a&text_color=f8fafc&primary_color=3b82f6" 
             width="100%" 
             height="100%" 
             frameBorder="0" 
