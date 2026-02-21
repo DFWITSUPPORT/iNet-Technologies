@@ -1,6 +1,7 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Hero from "@/components/Hero";
+import Experience from "@/components/Experience";
 import Problem from "@/components/Problem";
 import Readiness from "@/components/Readiness";
 import Agents from "@/components/Agents";
@@ -12,6 +13,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <Experience />
         <Problem />
         <div id="readiness">
           <Readiness />
