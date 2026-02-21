@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Database, Bot } from "lucide-react";
+import BookingModal from "@/components/BookingModal";
 import heroBg from "@/assets/hero-bg.png";
 
 export default function Hero() {
@@ -42,11 +43,13 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="h-12 px-8 rounded-lg bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-all flex items-center gap-2 group shadow-[0_0_20px_-5px_hsl(var(--primary))]">
-              Start with an Audit
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </button>
-            <button className="h-12 px-8 rounded-lg border border-white/10 hover:bg-white/5 transition-all text-foreground font-medium backdrop-blur-sm">
+            <BookingModal>
+              <button className="h-12 px-8 rounded-lg bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-all flex items-center gap-2 group shadow-[0_0_20px_-5px_hsl(var(--primary))] cursor-pointer">
+                Start with an Audit
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </button>
+            </BookingModal>
+            <button className="h-12 px-8 rounded-lg border border-white/10 hover:bg-white/5 transition-all text-foreground font-medium backdrop-blur-sm cursor-pointer">
               Explore Agents
             </button>
           </div>

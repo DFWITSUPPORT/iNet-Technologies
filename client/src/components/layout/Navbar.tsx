@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import BookingModal from "@/components/BookingModal";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,9 +27,11 @@ export default function Navbar() {
           <button onClick={() => scrollToSection('readiness')} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors cursor-pointer">Readiness</button>
           <button onClick={() => scrollToSection('agents')} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors cursor-pointer">Agents</button>
           <button onClick={() => scrollToSection('process')} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors cursor-pointer">Process</button>
-          <button className="h-9 px-4 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-colors text-sm font-medium cursor-pointer">
-            Contact Us
-          </button>
+          <BookingModal>
+            <button className="h-9 px-4 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-colors text-sm font-medium cursor-pointer">
+              Contact Us
+            </button>
+          </BookingModal>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -43,9 +46,11 @@ export default function Navbar() {
           <button onClick={() => scrollToSection('readiness')} className="text-sm font-medium p-2 hover:bg-white/5 rounded text-left">Readiness</button>
           <button onClick={() => scrollToSection('agents')} className="text-sm font-medium p-2 hover:bg-white/5 rounded text-left">Agents</button>
           <button onClick={() => scrollToSection('process')} className="text-sm font-medium p-2 hover:bg-white/5 rounded text-left">Process</button>
-          <button className="w-full h-10 rounded-lg bg-primary text-primary-foreground font-medium">
-            Contact Us
-          </button>
+          <BookingModal>
+            <button className="w-full h-10 rounded-lg bg-primary text-primary-foreground font-medium cursor-pointer">
+              Contact Us
+            </button>
+          </BookingModal>
         </div>
       )}
     </nav>

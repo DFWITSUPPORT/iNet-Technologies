@@ -7,6 +7,7 @@ import Problem from "@/components/Problem";
 import Readiness from "@/components/Readiness";
 import Agents from "@/components/Agents";
 import Process from "@/components/Process";
+import BookingModal from "@/components/BookingModal";
 
 export default function Home() {
   return (
@@ -36,9 +37,11 @@ export default function Home() {
               Start with a readiness audit to see where you stand, or schedule a demo of our agents in action.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="h-14 px-8 rounded-full bg-primary text-primary-foreground font-bold text-lg hover:bg-primary/90 transition-all shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5 cursor-pointer">
-                Book a Free Consultation
-              </button>
+              <BookingModal>
+                <button className="h-14 px-8 rounded-full bg-primary text-primary-foreground font-bold text-lg hover:bg-primary/90 transition-all shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5 cursor-pointer">
+                  Book a Free Consultation
+                </button>
+              </BookingModal>
               <button className="h-14 px-8 rounded-full bg-card border border-white/10 text-foreground font-medium text-lg hover:bg-white/5 transition-all cursor-pointer">
                 View Pricing Details
               </button>
