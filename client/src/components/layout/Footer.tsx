@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           <div className="col-span-2">
-            <h3 className="font-display font-bold text-xl mb-4">Inet Technologies</h3>
+            <h3 className="font-display font-bold text-xl mb-4">iNet Technologies</h3>
             <p className="text-muted-foreground max-w-sm mb-4">
               Enterprise Expertise. Executive Alignment. Real Transformation. We prepare complex organizations for AI deployment.
             </p>
@@ -33,7 +33,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Inet Technologies. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} iNet Technologies. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-foreground">Terms</a>
             <a href="#" className="hover:text-foreground">Privacy</a>
