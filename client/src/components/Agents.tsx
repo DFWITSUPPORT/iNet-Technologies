@@ -9,8 +9,8 @@ export default function Agents() {
       icon: <Bot className="w-6 h-6" />,
       price: "$400",
       period: "/mo",
-      desc: "One agent, one specific job.",
-      features: ["FAQ Bot or Lead Gen", "Standard Response Time", "Weekly Reporting", "Email Support"],
+      desc: "Automate one specific bottleneck.",
+      features: ["Recoup 20+ Hours/Week", "Instant Response Times", "Lead Qualification", "Error-Free Execution"],
       highlight: false
     },
     {
@@ -18,8 +18,8 @@ export default function Agents() {
       icon: <Zap className="w-6 h-6" />,
       price: "$1,000",
       period: "/mo",
-      desc: "Full agent with memory & tools.",
-      features: ["Multi-task Capabilities", "CRM Integration", "Context Memory", "24/7 Active Monitoring", "Slack/Teams Integration"],
+      desc: "A digital worker for complex workflows.",
+      features: ["Recoup 100+ Hours/Week", "End-to-End Task Handling", "CRM & Slack Integration", "24/7 Active Monitoring", "Contextual Memory"],
       highlight: true
     },
     {
@@ -27,8 +27,8 @@ export default function Agents() {
       icon: <Crown className="w-6 h-6" />,
       price: "$2,500+",
       period: "/mo",
-      desc: "Enterprise custom workflows.",
-      features: ["Custom Workflows", "Dedicated Infrastructure", "Priority Support", "Advanced Analytics", "Custom API Access"],
+      desc: "Scale entire departments automatically.",
+      features: ["Replace Multiple Roles", "Dedicated Infrastructure", "Advanced Analytics & ROI", "Priority 24/7 Support", "Custom API Action Access"],
       highlight: false
     }
   ];
@@ -44,10 +44,10 @@ export default function Agents() {
             <img src={agentIcon} alt="AI Agent" className="w-24 h-24 animate-float opacity-80 mx-auto" />
           </div>
           <div className="max-w-2xl flex flex-col items-center">
-            <span className="text-accent font-mono text-sm tracking-wider uppercase">Part 2: The Workforce</span>
-            <h2 className="text-3xl md:text-5xl font-display font-bold mt-2 mb-4">Agent-as-a-Service</h2>
+            <span className="text-accent font-mono text-sm tracking-wider uppercase">Part 2: The Payoff</span>
+            <h2 className="text-3xl md:text-5xl font-display font-bold mt-2 mb-4">Hire Digital Employees</h2>
             <p className="text-lg text-muted-foreground">
-              Once your data is clean, we deploy digital employees. They don't take breaks, they don't sleep, and they scale instantly.
+              Replace manual drudgery. Slash operational costs, eliminate human error, and scale your output without adding headcount.
             </p>
           </div>
         </div>

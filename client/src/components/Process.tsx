@@ -22,8 +22,8 @@ export default function Process() {
               className="bg-card border border-white/10 p-6 rounded-xl text-center shadow-lg relative"
             >
               <div className="text-sm text-destructive font-mono mb-2">Current State</div>
-              <h3 className="font-bold text-lg">Your Data is Messy</h3>
-              <p className="text-sm text-muted-foreground mt-1">Silos, duplicates, disconnection.</p>
+              <h3 className="font-bold text-lg">High Costs & Bottlenecks</h3>
+              <p className="text-sm text-muted-foreground mt-1">Manual data entry, scattered systems, wasted hours.</p>
             </motion.div>
 
             <div className="flex justify-center">
@@ -39,8 +39,8 @@ export default function Process() {
               className="bg-primary/5 border border-primary/20 p-6 rounded-xl text-center shadow-[0_0_30px_-10px_rgba(59,130,246,0.1)] relative"
             >
               <div className="text-sm text-primary font-mono mb-2">Phase 1: Readiness</div>
-              <h3 className="font-bold text-lg">We Clean & Connect</h3>
-              <p className="text-sm text-muted-foreground mt-1">One-time project ($2.5k - $15k)</p>
+              <h3 className="font-bold text-lg">Unlock the Data</h3>
+              <p className="text-sm text-muted-foreground mt-1">One-time investment to enable real automation.</p>
             </motion.div>
 
             <div className="flex justify-center">
@@ -56,8 +56,8 @@ export default function Process() {
               className="bg-accent/5 border border-accent/20 p-6 rounded-xl text-center shadow-[0_0_30px_-10px_rgba(6,182,212,0.1)] relative"
             >
               <div className="text-sm text-accent font-mono mb-2">Phase 2: Execution</div>
-              <h3 className="font-bold text-lg">We Deploy AI Agents</h3>
-              <p className="text-sm text-muted-foreground mt-1">Recurring service ($400 - $2.5k/mo)</p>
+              <h3 className="font-bold text-lg">Deploy Digital Workers</h3>
+              <p className="text-sm text-muted-foreground mt-1">Generate recurring savings and scale output.</p>
             </motion.div>
 
             <div className="flex justify-center">
@@ -73,9 +73,9 @@ export default function Process() {
               className="bg-linear-to-br from-primary to-accent p-1 rounded-xl"
             >
               <div className="bg-background rounded-[10px] p-6 text-center h-full">
-                <div className="text-sm font-mono text-transparent bg-clip-text bg-linear-to-r from-primary to-accent mb-2 uppercase tracking-widest font-bold">Result</div>
-                <h3 className="font-bold text-lg text-white">Automated Enterprise</h3>
-                <p className="text-sm text-muted-foreground mt-1">Sticky revenue + High efficiency</p>
+                <div className="text-sm font-mono text-transparent bg-clip-text bg-linear-to-r from-primary to-accent mb-2 uppercase tracking-widest font-bold">The Payoff</div>
+                <h3 className="font-bold text-lg text-white">Massive Margin Expansion</h3>
+                <p className="text-sm text-muted-foreground mt-1">Lower operational costs + Exponentially higher throughput.</p>
               </div>
             </motion.div>
           </div>

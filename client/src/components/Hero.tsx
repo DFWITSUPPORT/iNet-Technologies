@@ -31,14 +31,14 @@ export default function Hero() {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-display font-bold leading-tight mb-6 tracking-tight">
-            AI is only as smart as <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-cyan-400 to-primary bg-300% animate-gradient">
-              your data allows.
+            Stop experimenting. <br />
+            Start driving <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-cyan-400 to-primary bg-300% animate-gradient">
+              real AI ROI.
             </span>
           </h1>
 
           <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
-            We transform your messy data into a clean foundation, then deploy intelligent AI agents to work for you 24/7.
+            We turn your messy data into a foundation for growth, then deploy AI agents that cut costs and scale your operations 24/7.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -63,16 +63,16 @@ export default function Hero() {
             <div className="h-12 w-12 rounded-lg bg-blue-500/10 flex items-center justify-center mb-4 group-hover:bg-blue-500/20 transition-colors">
               <Database className="w-6 h-6 text-blue-400" />
             </div>
-            <h3 className="text-xl font-display font-bold mb-2">1. AI Readiness</h3>
-            <p className="text-muted-foreground">Clean your data mess. Connect your systems. Build the foundation.</p>
+            <h3 className="text-xl font-display font-bold mb-2">1. The Foundation</h3>
+            <p className="text-muted-foreground">Clean your data to unlock automation and prevent costly AI hallucinations.</p>
           </div>
 
           <div className="p-6 rounded-2xl bg-card/40 border border-white/5 backdrop-blur-md hover:border-cyan/30 transition-colors group">
             <div className="h-12 w-12 rounded-lg bg-cyan-500/10 flex items-center justify-center mb-4 group-hover:bg-cyan-500/20 transition-colors">
               <Bot className="w-6 h-6 text-cyan-400" />
             </div>
-            <h3 className="text-xl font-display font-bold mb-2">2. Agent-as-a-Service</h3>
-            <p className="text-muted-foreground">Deploy digital employees that never sleep, scale instantly, and cost less.</p>
+            <h3 className="text-xl font-display font-bold mb-2">2. The Payoff</h3>
+            <p className="text-muted-foreground">Deploy digital employees to slash operational costs and multiply your output.</p>
           </div>
         </motion.div>
       </div>

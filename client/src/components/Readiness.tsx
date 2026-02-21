@@ -5,24 +5,24 @@ export default function Readiness() {
   const steps = [
     {
       icon: <Search className="w-8 h-8" />,
-      title: "Assessment",
+      title: "ROI Assessment",
       price: "$2,500",
-      desc: "We audit your data mess, identify what's broken, and provide a clear roadmap for fixing it.",
-      details: ["Data Source Audit", "Process Mapping", "Gap Analysis"]
+      desc: "We find the bottlenecks in your operations and calculate the exact ROI of automating them.",
+      details: ["Identify Wasted Hours", "Map Automation Potential", "Clear ROI Projection"]
     },
     {
       icon: <Database className="w-8 h-8" />,
       title: "Data Foundation",
       price: "$7,500 - $15k",
-      desc: "We actually clean it up. We connect your systems, remove duplicates, and build a single source of truth.",
-      details: ["System Integration", "Data Cleaning", "Unified Dashboard"]
+      desc: "We connect your silos and build a single source of truth so your AI agents never make decisions on bad data.",
+      details: ["Eliminate Manual Entry", "Unified Truth Source", "Automation-Ready Data"]
     },
     {
       icon: <Code2 className="w-8 h-8" />,
-      title: "Custom Integration",
+      title: "Enterprise Integration",
       price: "Custom",
-      desc: "For complex needs involving ERPs, legacy mainframes, or custom API development.",
-      details: ["Legacy Systems", "Custom APIs", "Enterprise Security"]
+      desc: "We unlock the data trapped in your legacy systems to enable company-wide operational efficiency.",
+      details: ["Legacy System Unblocking", "Custom API Pipelines", "Enterprise Security"]
     }
   ];
 
@@ -33,9 +33,9 @@ export default function Readiness() {
       <div className="container px-4 md:px-6 relative z-10">
         <div className="mb-16 flex flex-col items-center text-center">
           <span className="text-primary font-mono text-sm tracking-wider uppercase">Part 1: The Foundation</span>
-          <h2 className="text-3xl md:text-5xl font-display font-bold mt-2 mb-4">AI Readiness</h2>
+          <h2 className="text-3xl md:text-5xl font-display font-bold mt-2 mb-4">Unlock Automation</h2>
           <p className="text-lg text-muted-foreground max-w-2xl">
-            One-time projects to get your business ready for the future. We don't just tell you what to do — we fix the pipes.
+            Stop wasting money on AI that hallucinates. We build the clean data foundation required to actually automate your business.
           </p>
         </div>
 
