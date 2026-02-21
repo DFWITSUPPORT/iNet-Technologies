@@ -31,7 +31,7 @@ export default function Readiness() {
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
       
       <div className="container px-4 md:px-6 relative z-10">
-        <div className="mb-16">
+        <div className="mb-16 flex flex-col items-center text-center">
           <span className="text-primary font-mono text-sm tracking-wider uppercase">Part 1: The Foundation</span>
           <h2 className="text-3xl md:text-5xl font-display font-bold mt-2 mb-4">AI Readiness</h2>
           <p className="text-lg text-muted-foreground max-w-2xl">

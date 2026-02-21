@@ -39,16 +39,16 @@ export default function Agents() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-primary/20 rounded-full blur-[120px] -z-10"></div>
 
       <div className="container px-4 md:px-6">
-        <div className="flex flex-col md:flex-row items-center justify-between mb-16 gap-8">
-          <div className="max-w-2xl">
+        <div className="flex flex-col items-center text-center mb-16 gap-6">
+          <div className="hidden md:block">
+            <img src={agentIcon} alt="AI Agent" className="w-24 h-24 animate-float opacity-80 mx-auto" />
+          </div>
+          <div className="max-w-2xl flex flex-col items-center">
             <span className="text-accent font-mono text-sm tracking-wider uppercase">Part 2: The Workforce</span>
             <h2 className="text-3xl md:text-5xl font-display font-bold mt-2 mb-4">Agent-as-a-Service</h2>
             <p className="text-lg text-muted-foreground">
               Once your data is clean, we deploy digital employees. They don't take breaks, they don't sleep, and they scale instantly.
             </p>
-          </div>
-          <div className="hidden md:block">
-            <img src={agentIcon} alt="AI Agent" className="w-32 h-32 animate-float opacity-80" />
           </div>
         </div>
 
