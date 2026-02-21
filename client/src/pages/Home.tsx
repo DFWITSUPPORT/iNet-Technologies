@@ -2,6 +2,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Hero from "@/components/Hero";
 import Experience from "@/components/Experience";
+import CaseStudies from "@/components/CaseStudies";
 import Problem from "@/components/Problem";
 import Readiness from "@/components/Readiness";
 import Agents from "@/components/Agents";
@@ -14,6 +15,7 @@ export default function Home() {
       <main>
         <Hero />
         <Experience />
+        <CaseStudies />
         <Problem />
         <div id="readiness">
           <Readiness />
