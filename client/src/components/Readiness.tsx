@@ -47,7 +47,7 @@ export default function Readiness() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-card border border-white/5 rounded-2xl p-8 hover:border-primary/50 transition-all duration-300 shadow-lg relative group overflow-hidden"
+              className="bg-card border border-white/5 rounded-2xl p-8 hover:border-primary/50 transition-all duration-300 shadow-lg relative group overflow-hidden flex flex-col items-center text-center"
             >
               <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
                 {step.icon}
@@ -61,9 +61,9 @@ export default function Readiness() {
               <div className="text-xl font-mono text-accent mb-4">{step.price}</div>
               <p className="text-muted-foreground mb-8">{step.desc}</p>
               
-              <ul className="space-y-3">
+              <ul className="space-y-3 w-full">
                 {step.details.map((detail, i) => (
-                  <li key={i} className="flex items-center gap-3 text-sm text-foreground/80">
+                  <li key={i} className="flex items-center justify-center gap-3 text-sm text-foreground/80">
                     <CheckCircle2 className="w-4 h-4 text-primary" />
                     {detail}
                   </li>

@@ -46,7 +46,7 @@ export default function Problem() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="p-6 rounded-xl bg-card border border-border hover:border-destructive/40 transition-colors group"
+              className="p-6 rounded-xl bg-card border border-border hover:border-destructive/40 transition-colors group flex flex-col items-center text-center"
             >
               <div className="h-12 w-12 rounded-full bg-destructive/10 flex items-center justify-center mb-4 text-destructive group-hover:bg-destructive/20 transition-colors">
                 {item.icon}

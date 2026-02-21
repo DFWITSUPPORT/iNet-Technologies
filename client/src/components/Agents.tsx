@@ -60,7 +60,7 @@ export default function Agents() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
               viewport={{ once: true }}
-              className={`relative rounded-2xl p-8 border ${
+              className={`relative rounded-2xl p-8 border flex flex-col items-center text-center ${
                 tier.highlight 
                   ? "bg-card/80 border-primary shadow-[0_0_40px_-10px_rgba(59,130,246,0.3)]" 
                   : "bg-card/40 border-white/5 hover:border-white/10"
@@ -81,14 +81,14 @@ export default function Agents() {
               <h3 className="text-xl font-bold mb-1">{tier.name}</h3>
               <p className="text-sm text-muted-foreground mb-6 h-10">{tier.desc}</p>
 
-              <div className="flex items-baseline gap-1 mb-8">
+              <div className="flex items-baseline justify-center gap-1 mb-8 w-full">
                 <span className="text-4xl font-display font-bold">{tier.price}</span>
                 <span className="text-muted-foreground">{tier.period}</span>
               </div>
 
-              <ul className="space-y-4 mb-8">
+              <ul className="space-y-4 mb-8 w-full">
                 {tier.features.map((feature, i) => (
-                  <li key={i} className="flex items-start gap-3 text-sm">
+                  <li key={i} className="flex items-center justify-center gap-3 text-sm">
                     <Check className={`w-5 h-5 shrink-0 ${tier.highlight ? "text-primary" : "text-muted-foreground"}`} />
                     <span className="text-foreground/80">{feature}</span>
                   </li>
