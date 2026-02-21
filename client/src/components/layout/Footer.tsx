@@ -5,26 +5,30 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           <div className="col-span-2">
             <h3 className="font-display font-bold text-xl mb-4">Inet Technologies</h3>
-            <p className="text-muted-foreground max-w-sm">
-              Helping businesses build a data foundation for the future, and deploying the digital workforce of tomorrow.
+            <p className="text-muted-foreground max-w-sm mb-4">
+              Enterprise Expertise. Executive Alignment. Real Transformation. We prepare complex organizations for AI deployment.
             </p>
+            <div className="text-sm text-muted-foreground">
+              <p className="font-medium text-foreground">Tim Wilson</p>
+              <p>tim@dfwitexpert.com</p>
+            </div>
           </div>
           <div>
-            <h4 className="font-bold mb-4">Services</h4>
+            <h4 className="font-bold mb-4">Enterprise Services</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#" className="hover:text-primary transition-colors">Data Audit</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">System Integration</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">AI Agents</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Consulting</a></li>
+              <li><a href="#readiness" className="hover:text-primary transition-colors">Readiness Assessment</a></li>
+              <li><a href="#readiness" className="hover:text-primary transition-colors">Data Foundation</a></li>
+              <li><a href="#agents" className="hover:text-primary transition-colors">Agent-as-a-Service</a></li>
+              <li><a href="#process" className="hover:text-primary transition-colors">Implementation Process</a></li>
             </ul>
           </div>
           <div>
-            <h4 className="font-bold mb-4">Company</h4>
+            <h4 className="font-bold mb-4">Industries Served</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#" className="hover:text-primary transition-colors">About</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Blog</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Contact</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Privacy</a></li>
+              <li><span className="hover:text-primary transition-colors cursor-default">Construction & Logistics</span></li>
+              <li><span className="hover:text-primary transition-colors cursor-default">Manufacturing</span></li>
+              <li><span className="hover:text-primary transition-colors cursor-default">Healthcare</span></li>
+              <li><span className="hover:text-primary transition-colors cursor-default">Professional Services</span></li>
             </ul>
           </div>
         </div>

@@ -5,23 +5,23 @@ export default function Problem() {
   const problems = [
     {
       icon: <FileWarning className="w-6 h-6" />,
-      title: "Scattered Files",
-      desc: "Data lives in 10 different spreadsheets, emails, and legacy systems."
+      title: "Data Fragmentation",
+      desc: "Data fragmentation across business units, systems, and regions prevents true intelligence."
     },
     {
       icon: <GitGraph className="w-6 h-6" />,
-      title: "Disconnected Systems",
-      desc: "Your CRM doesn't talk to your accounting software. Nothing syncs."
+      title: "Legacy Infrastructure",
+      desc: "Outdated infrastructure blocking enterprise automation and scalability."
     },
     {
       icon: <SearchX className="w-6 h-6" />,
-      title: "No Truth Source",
-      desc: "Duplicates, missing info, and outdated records make decisions impossible."
+      title: "Inaccurate Outputs",
+      desc: "AI produces inaccurate or non-compliant outputs without unified governance."
     },
     {
       icon: <AlertTriangle className="w-6 h-6" />,
-      title: "AI Failure",
-      desc: "You tried AI tools but got garbage results because the input was messy."
+      title: "Escalating Tech Debt",
+      desc: "Rapidly expanding technical debt due to duplicate systems and non-scalable AI pilots."
     }
   ];
 
@@ -29,12 +29,14 @@ export default function Problem() {
     <section className="py-24 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="max-w-3xl mx-auto flex flex-col items-center text-center mb-16">
+          <span className="text-destructive font-mono text-sm tracking-wider uppercase mb-2">The Hidden Risks of Inaction</span>
           <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">
-            You can't hire AI if your <br />
-            <span className="text-destructive">office is a mess.</span>
+            AI Is Not a Tool. <br />
+            <span className="text-destructive">It's an Operating Model Shift.</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Think of it like this: You wouldn't hire a new employee into an office where files are scattered on the floor and nobody knows where anything is. AI is the same — it needs structure to survive.
+            AI cannot produce enterprise value on top of fragmented systems and inconsistent data models. 
+            Moving toward AI without readiness creates unmanageable technical debt and security vulnerabilities.
           </p>
         </div>
 

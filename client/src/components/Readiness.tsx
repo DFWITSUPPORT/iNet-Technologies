@@ -5,24 +5,24 @@ export default function Readiness() {
   const steps = [
     {
       icon: <Search className="w-8 h-8" />,
-      title: "ROI Assessment",
+      title: "Enterprise AI Readiness Assessment",
       price: "$2,500",
-      desc: "We find the bottlenecks in your operations and calculate the exact ROI of automating them.",
-      details: ["Identify Wasted Hours", "Map Automation Potential", "Clear ROI Projection"]
+      desc: "We conduct an executive diagnostic to identify fragmentation, risks, and ROI potential before any code is written.",
+      details: ["Executive Diagnostic", "Data Governance Review", "ROI Projection & Roadmap"]
     },
     {
       icon: <Database className="w-8 h-8" />,
-      title: "Data Foundation",
-      price: "$7,500 - $15k",
-      desc: "We connect your silos and build a single source of truth so your AI agents never make decisions on bad data.",
-      details: ["Eliminate Manual Entry", "Unified Truth Source", "Automation-Ready Data"]
+      title: "Enterprise Data Foundation",
+      price: "$15,000+",
+      desc: "We prepare your data and align your systems so AI has a secure, compliant, and unified foundation to operate on.",
+      details: ["System Integration & Alignment", "Data Cleaning & Unification", "Security & Governance Setup"]
     },
     {
       icon: <Code2 className="w-8 h-8" />,
-      title: "Enterprise Integration",
+      title: "Custom Enterprise Integration",
       price: "Custom",
-      desc: "We unlock the data trapped in your legacy systems to enable company-wide operational efficiency.",
-      details: ["Legacy System Unblocking", "Custom API Pipelines", "Enterprise Security"]
+      desc: "We unlock data trapped in legacy infrastructure across business units, regions, and conflicting reporting systems.",
+      details: ["Legacy System Unblocking", "Cross-Department Alignment", "Enterprise Architecture"]
     }
   ];
 
@@ -32,10 +32,10 @@ export default function Readiness() {
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="mb-16 flex flex-col items-center text-center">
-          <span className="text-primary font-mono text-sm tracking-wider uppercase">Part 1: The Foundation</span>
-          <h2 className="text-3xl md:text-5xl font-display font-bold mt-2 mb-4">Unlock Automation</h2>
+          <span className="text-primary font-mono text-sm tracking-wider uppercase">Enterprise Service Packages</span>
+          <h2 className="text-3xl md:text-5xl font-display font-bold mt-2 mb-4">We Prepare Complex Organizations for AI Deployment</h2>
           <p className="text-lg text-muted-foreground max-w-2xl">
-            Stop wasting money on AI that hallucinates. We build the clean data foundation required to actually automate your business.
+            Enterprises don't need more tools—they need clarity, alignment, and a unified data foundation.
           </p>
         </div>
 

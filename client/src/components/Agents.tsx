@@ -5,30 +5,30 @@ import agentIcon from "@/assets/agent-icon.png";
 export default function Agents() {
   const tiers = [
     {
-      name: "Starter",
+      name: "Department Pilot",
       icon: <Bot className="w-6 h-6" />,
-      price: "$400",
+      price: "$2,500",
       period: "/mo",
-      desc: "Automate one specific bottleneck.",
-      features: ["Recoup 20+ Hours/Week", "Instant Response Times", "Lead Qualification", "Error-Free Execution"],
+      desc: "Automate specific departmental bottlenecks.",
+      features: ["Customer Experience / Support", "Sales Operations Automation", "Internal IT / Compliance", "Error-Free Execution"],
       highlight: false
     },
     {
-      name: "Core",
+      name: "Enterprise Core",
       icon: <Zap className="w-6 h-6" />,
-      price: "$1,000",
+      price: "$5,000",
       period: "/mo",
-      desc: "A digital worker for complex workflows.",
-      features: ["Recoup 100+ Hours/Week", "End-to-End Task Handling", "CRM & Slack Integration", "24/7 Active Monitoring", "Contextual Memory"],
+      desc: "Cross-departmental digital workforce.",
+      features: ["Multi-System AI Agents", "End-to-End Task Handling", "Enterprise System Integrations", "24/7 Active Monitoring", "Contextual Memory & Governance"],
       highlight: true
     },
     {
-      name: "Premium",
+      name: "Enterprise Scale",
       icon: <Crown className="w-6 h-6" />,
-      price: "$2,500+",
+      price: "$10,000+",
       period: "/mo",
-      desc: "Scale entire departments automatically.",
-      features: ["Replace Multiple Roles", "Dedicated Infrastructure", "Advanced Analytics & ROI", "Priority 24/7 Support", "Custom API Action Access"],
+      desc: "Scale entire operations automatically.",
+      features: ["Replace Complex Multi-Role Processes", "Dedicated Private Infrastructure", "Advanced Analytics & ROI Dashboards", "Priority 24/7 Enterprise Support", "Custom API Actions"],
       highlight: false
     }
   ];
@@ -44,10 +44,10 @@ export default function Agents() {
             <img src={agentIcon} alt="AI Agent" className="w-24 h-24 animate-float opacity-80 mx-auto" />
           </div>
           <div className="max-w-2xl flex flex-col items-center">
-            <span className="text-accent font-mono text-sm tracking-wider uppercase">Part 2: The Payoff</span>
-            <h2 className="text-3xl md:text-5xl font-display font-bold mt-2 mb-4">Hire Digital Employees</h2>
+            <span className="text-accent font-mono text-sm tracking-wider uppercase">Enterprise Agent-as-a-Service (AaaS)</span>
+            <h2 className="text-3xl md:text-5xl font-display font-bold mt-2 mb-4">Enterprise AI Automations</h2>
             <p className="text-lg text-muted-foreground">
-              Replace manual drudgery. Slash operational costs, eliminate human error, and scale your output without adding headcount.
+              Once your foundation is secure, we deploy AI agents to handle Customer Experience, Internal Efficiency, Sales Operations, and IT Compliance at scale.
             </p>
           </div>
         </div>

@@ -6,8 +6,9 @@ export default function Process() {
     <section className="py-24 bg-background border-y border-white/5">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-display font-bold">Our Implementation Process</h2>
-          <p className="text-muted-foreground mt-4">How we build and deploy digital employees into your operations.</p>
+          <span className="text-accent font-mono text-sm tracking-wider uppercase mb-2 block">Enterprise AI Readiness Framework</span>
+          <h2 className="text-3xl font-display font-bold">A Systems-Level Approach Built for Scale</h2>
+          <p className="text-muted-foreground mt-4">A proven 4-step framework to transition complex enterprises into AI-driven organizations.</p>
         </div>
 
         <div className="max-w-md mx-auto relative">
@@ -24,8 +25,8 @@ export default function Process() {
               <div className="flex justify-center mb-4">
                 <div className="w-8 h-8 rounded-full bg-primary/20 text-primary flex items-center justify-center font-bold font-mono text-sm">1</div>
               </div>
-              <h3 className="font-bold text-lg">Discovery & Process Mapping</h3>
-              <p className="text-sm text-muted-foreground mt-2">We analyze your daily operations, find the manual bottlenecks, and map out exactly where an AI bot will have the highest ROI.</p>
+              <h3 className="font-bold text-lg">Assess (Executive Diagnostic)</h3>
+              <p className="text-sm text-muted-foreground mt-2">We analyze your daily operations, execute a comprehensive diagnostic on your infrastructure, and map out exactly where AI will deliver enterprise value.</p>
             </motion.div>
 
             <div className="flex justify-center">
@@ -43,8 +44,8 @@ export default function Process() {
               <div className="flex justify-center mb-4">
                 <div className="w-8 h-8 rounded-full bg-primary/20 text-primary flex items-center justify-center font-bold font-mono text-sm">2</div>
               </div>
-              <h3 className="font-bold text-lg">Data Readiness & Integration</h3>
-              <p className="text-sm text-muted-foreground mt-2">AI fails on messy data. We connect your APIs, clean your databases, and build a secure sandbox so the bot has accurate context.</p>
+              <h3 className="font-bold text-lg">Prepare (Data & System Alignment)</h3>
+              <p className="text-sm text-muted-foreground mt-2">AI fails on messy data. We connect your APIs, resolve system fragmentation, enforce data governance, and build a unified foundation.</p>
             </motion.div>
 
             <div className="flex justify-center">
@@ -62,8 +63,8 @@ export default function Process() {
               <div className="flex justify-center mb-4">
                 <div className="w-8 h-8 rounded-full bg-primary/20 text-primary flex items-center justify-center font-bold font-mono text-sm">3</div>
               </div>
-              <h3 className="font-bold text-lg">Agent Development</h3>
-              <p className="text-sm text-muted-foreground mt-2">We build and train the digital employee. We set strict guardrails, define its specific tasks, and test it against edge cases.</p>
+              <h3 className="font-bold text-lg">Deploy (AI Agents & Automations)</h3>
+              <p className="text-sm text-muted-foreground mt-2">We build and train digital employees to handle complex enterprise workflows across departments safely, securely, and accurately.</p>
             </motion.div>
 
             <div className="flex justify-center">
@@ -83,8 +84,8 @@ export default function Process() {
                 <div className="flex justify-center mb-4 relative z-10">
                   <div className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold font-mono text-sm shadow-[0_0_15px_rgba(59,130,246,0.5)]">4</div>
                 </div>
-                <h3 className="font-bold text-xl text-white relative z-10">Deployment & Optimization</h3>
-                <p className="text-sm text-muted-foreground mt-2 relative z-10">The bot goes live. We monitor its performance 24/7, refine its logic, and ensure it continues to scale your margins automatically.</p>
+                <h3 className="font-bold text-xl text-white relative z-10">Optimize (Scale & Performance)</h3>
+                <p className="text-sm text-muted-foreground mt-2 relative z-10">The automations go live. We monitor performance 24/7, refine logic, and ensure it continues to scale your margins without expanding headcount.</p>
               </div>
             </motion.div>
           </div>
