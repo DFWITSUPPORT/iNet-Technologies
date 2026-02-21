@@ -28,7 +28,7 @@ export default function Problem() {
   return (
     <section className="py-24 bg-background relative overflow-hidden">
       <div className="container px-4 md:px-6 relative z-10">
-        <div className="max-w-3xl mx-auto text-center mb-16">
+        <div className="max-w-3xl mx-auto flex flex-col items-center text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">
             You can't hire AI if your <br />
             <span className="text-destructive">office is a mess.</span>
