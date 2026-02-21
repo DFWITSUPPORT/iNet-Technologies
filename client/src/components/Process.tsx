@@ -4,7 +4,7 @@ import { ArrowDown } from "lucide-react";
 export default function Process() {
   return (
     <section className="py-24 bg-background border-y border-white/5">
-      <div className="container px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-display font-bold">How It All Fits Together</h2>
           <p className="text-muted-foreground mt-4">The path to an automated enterprise.</p>

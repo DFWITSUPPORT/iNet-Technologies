@@ -26,7 +26,7 @@ export default function Home() {
         {/* CTA Section */}
         <section className="py-24 relative overflow-hidden">
           <div className="absolute inset-0 bg-primary/10"></div>
-          <div className="container px-4 md:px-6 relative z-10 text-center">
+          <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
             <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">Ready to upgrade your workforce?</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
               Start with a readiness audit to see where you stand, or schedule a demo of our agents in action.

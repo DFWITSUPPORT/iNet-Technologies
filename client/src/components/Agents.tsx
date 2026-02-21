@@ -38,7 +38,7 @@ export default function Agents() {
       {/* Abstract Background */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-primary/20 rounded-full blur-[120px] -z-10"></div>
 
-      <div className="container px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center text-center mb-16 gap-6">
           <div className="hidden md:block">
             <img src={agentIcon} alt="AI Agent" className="w-24 h-24 animate-float opacity-80 mx-auto" />
