@@ -152,6 +152,9 @@ export default function AIEmployee() {
         <section className="py-24 bg-black/40 border-y border-white/5">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center max-w-3xl mx-auto mb-16">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-sm font-medium mb-6">
+                <span className="text-primary font-bold tracking-wider uppercase">Small Business Solutions</span>
+              </div>
               <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">Simple, Transparent Pricing</h2>
               <p className="text-xl text-muted-foreground">Hire a top-performing employee for a fraction of minimum wage.</p>
             </div>
@@ -200,9 +203,9 @@ export default function AIEmployee() {
                 </BookingModal>
               </div>
 
-              {/* Enterprise */}
+              {/* Elite */}
               <div className="p-8 rounded-3xl bg-background border border-white/10 shadow-xl">
-                <h3 className="text-2xl font-bold mb-2">Enterprise</h3>
+                <h3 className="text-2xl font-bold mb-2">Elite</h3>
                 <p className="text-muted-foreground mb-6">Custom workflows for complex operations.</p>
                 <div className="mb-6">
                   <span className="text-5xl font-black">$2,497</span>
@@ -216,7 +219,7 @@ export default function AIEmployee() {
                   <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-primary" /><span>Dedicated Support Rep</span></li>
                 </ul>
                 <BookingModal>
-                  <button className="w-full h-12 rounded-xl bg-white/10 hover:bg-white/20 font-medium transition-colors">Select Enterprise</button>
+                  <button className="w-full h-12 rounded-xl bg-white/10 hover:bg-white/20 font-medium transition-colors">Select Elite</button>
                 </BookingModal>
               </div>
             </div>
