@@ -41,6 +41,9 @@ export default function Navbar() {
           <Link href="/ai-employee">
             <span className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors cursor-pointer">AI Employee</span>
           </Link>
+          <Link href="/features">
+            <span className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors cursor-pointer">Features</span>
+          </Link>
           <BookingModal>
             <button className="h-9 px-4 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-colors text-sm font-medium cursor-pointer">
               Contact Us
@@ -62,6 +65,9 @@ export default function Navbar() {
           <button onClick={() => scrollToSection('process')} className="text-sm font-medium p-2 hover:bg-white/5 rounded text-left">Process</button>
           <Link href="/ai-employee">
             <span className="text-sm font-medium p-2 hover:bg-white/5 rounded text-left block" onClick={() => setIsOpen(false)}>AI Employee</span>
+          </Link>
+          <Link href="/features">
+            <span className="text-sm font-medium p-2 hover:bg-white/5 rounded text-left block" onClick={() => setIsOpen(false)}>Features</span>
           </Link>
           <BookingModal>
             <button className="w-full h-10 rounded-lg bg-primary text-primary-foreground font-medium cursor-pointer">
