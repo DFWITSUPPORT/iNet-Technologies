@@ -1,11 +1,13 @@
 import { Link, useLocation } from "wouter";
-import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { Menu, X, ChevronDown } from "lucide-react";
+import { useState, useRef, useEffect } from "react";
 import BookingModal from "@/components/BookingModal";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [location, setLocation] = useLocation();
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const scrollToSection = (id: string) => {
     if (location !== "/") {
@@ -25,6 +27,17 @@ export default function Navbar() {
     setIsOpen(false);
   };
 
+  const handleMouseEnter = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setIsServicesOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setIsServicesOpen(false);
+    }, 150);
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-background/80 backdrop-blur-md">
       <div className="container mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
@@ -35,15 +48,32 @@ export default function Navbar() {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
-          <button onClick={() => scrollToSection('readiness')} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors cursor-pointer">Readiness</button>
-          <button onClick={() => scrollToSection('agents')} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors cursor-pointer">Agents</button>
-          <button onClick={() => scrollToSection('process')} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors cursor-pointer">Process</button>
-          <Link href="/ai-employee">
-            <span className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors cursor-pointer">AI Employee</span>
-          </Link>
+          <div 
+            className="relative" 
+            onMouseEnter={handleMouseEnter} 
+            onMouseLeave={handleMouseLeave}
+          >
+            <button className="flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors cursor-pointer py-2">
+              Services <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} />
+            </button>
+            
+            {/* Dropdown Menu */}
+            <div className={`absolute top-full -left-4 pt-2 transition-all duration-200 origin-top ${isServicesOpen ? 'opacity-100 scale-y-100' : 'opacity-0 scale-y-0 pointer-events-none'}`}>
+              <div className="w-56 rounded-xl border border-white/10 bg-background/95 backdrop-blur-xl p-2 shadow-xl flex flex-col gap-1">
+                <button onClick={() => scrollToSection('readiness')} className="w-full text-left px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-white/5 rounded-lg transition-colors">AI Readiness</button>
+                <button onClick={() => scrollToSection('agents')} className="w-full text-left px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-white/5 rounded-lg transition-colors">Agent-as-a-Service</button>
+                <Link href="/ai-employee">
+                  <span className="block px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-white/5 rounded-lg transition-colors cursor-pointer" onClick={() => setIsServicesOpen(false)}>AI Employee Setup</span>
+                </Link>
+              </div>
+            </div>
+          </div>
+          
           <Link href="/features">
-            <span className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors cursor-pointer">Features</span>
+            <span className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors cursor-pointer py-2">Features</span>
           </Link>
+          <button onClick={() => scrollToSection('process')} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors cursor-pointer py-2">Process</button>
+          
           <BookingModal>
             <button className="h-9 px-4 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-colors text-sm font-medium cursor-pointer">
               Contact Us
@@ -59,16 +89,23 @@ export default function Navbar() {
 
       {/* Mobile Nav */}
       {isOpen && (
-        <div className="md:hidden absolute top-16 left-0 right-0 bg-background border-b border-white/5 p-4 flex flex-col gap-4 shadow-xl z-50">
-          <button onClick={() => scrollToSection('readiness')} className="text-sm font-medium p-2 hover:bg-white/5 rounded text-left">Readiness</button>
-          <button onClick={() => scrollToSection('agents')} className="text-sm font-medium p-2 hover:bg-white/5 rounded text-left">Agents</button>
-          <button onClick={() => scrollToSection('process')} className="text-sm font-medium p-2 hover:bg-white/5 rounded text-left">Process</button>
-          <Link href="/ai-employee">
-            <span className="text-sm font-medium p-2 hover:bg-white/5 rounded text-left block" onClick={() => setIsOpen(false)}>AI Employee</span>
-          </Link>
+        <div className="md:hidden absolute top-16 left-0 right-0 bg-background border-b border-white/5 p-4 flex flex-col gap-4 shadow-xl z-50 max-h-[calc(100vh-4rem)] overflow-y-auto">
+          <div className="flex flex-col gap-1">
+            <div className="text-sm font-bold text-foreground/50 uppercase tracking-wider px-2 py-2">Services</div>
+            <div className="flex flex-col gap-1 border-l border-white/10 ml-3 pl-2">
+              <button onClick={() => scrollToSection('readiness')} className="text-sm font-medium p-2 hover:bg-white/5 rounded text-left text-muted-foreground hover:text-foreground">AI Readiness</button>
+              <button onClick={() => scrollToSection('agents')} className="text-sm font-medium p-2 hover:bg-white/5 rounded text-left text-muted-foreground hover:text-foreground">Agent-as-a-Service</button>
+              <Link href="/ai-employee">
+                <span className="text-sm font-medium p-2 hover:bg-white/5 rounded text-left block text-muted-foreground hover:text-foreground" onClick={() => setIsOpen(false)}>AI Employee Setup</span>
+              </Link>
+            </div>
+          </div>
+          <div className="h-px bg-white/5 my-1" />
           <Link href="/features">
             <span className="text-sm font-medium p-2 hover:bg-white/5 rounded text-left block" onClick={() => setIsOpen(false)}>Features</span>
           </Link>
+          <button onClick={() => scrollToSection('process')} className="text-sm font-medium p-2 hover:bg-white/5 rounded text-left">Process</button>
+          
           <BookingModal>
             <button className="w-full h-10 rounded-lg bg-primary text-primary-foreground font-medium cursor-pointer">
               Contact Us
