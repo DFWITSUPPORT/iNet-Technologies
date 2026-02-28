@@ -44,10 +44,10 @@ export default function Experience() {
             </h2>
             
             <p className="text-lg text-muted-foreground mb-6">
-              The internet is flooded with overnight "AI Experts" selling fragile wrappers and hype. We are software engineers first. 
+              Most of these overnight "AI Agencies" lack real engineering experience. They sell fragile wrappers and hype, leaving you with systems that break when it matters most.
             </p>
             <p className="text-lg text-foreground/80 mb-8">
-              With over 25 years of experience integrating complex enterprise systems, we know that if the underlying architecture is weak, the AI will fail. We build for scale, security, and survival.
+              We are different. iNet Technologies is a true technical powerhouse, fully staffed with dedicated <strong>Developers, Business Analysts, QA Engineers, and System Architects</strong>. With over 25 years of experience integrating complex systems, we have the deep technical talent required to support our clients and build AI infrastructure that actually scales.
             </p>
 
             <div className="flex flex-wrap gap-6">
