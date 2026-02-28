@@ -18,13 +18,13 @@ export default function Home() {
         <Experience />
         <CaseStudies />
         <Problem />
-        <div id="readiness">
+        
+        {/* Enterprise AaaS Section (Includes Readiness + Agents) */}
+        <div id="enterprise-aaas">
           <Readiness />
-        </div>
-        <div id="process">
-          <Process />
-        </div>
-        <div id="agents">
+          <div id="process">
+            <Process />
+          </div>
           <Agents />
         </div>
         

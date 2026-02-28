@@ -44,10 +44,12 @@ export default function Agents() {
             <img src={agentIcon} alt="AI Agent" className="w-24 h-24 animate-float opacity-80 mx-auto" />
           </div>
           <div className="max-w-2xl flex flex-col items-center">
-            <span className="text-accent font-mono text-sm tracking-wider uppercase">Enterprise Agent-as-a-Service (AaaS)</span>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-sm font-medium mb-6">
+              <span className="text-cyan-400 font-bold tracking-wider uppercase">Phase 2: Agent-as-a-Service Deployment</span>
+            </div>
             <h2 className="text-3xl md:text-5xl font-display font-bold mt-2 mb-4">Enterprise AI Automations</h2>
             <p className="text-lg text-muted-foreground">
-              Once your foundation is secure, we deploy AI agents to handle Customer Experience, Internal Efficiency, Sales Operations, and IT Compliance at scale.
+              Once your foundation is secure, we deploy our Agent-as-a-Service (AaaS) to handle Customer Experience, Internal Efficiency, Sales Operations, and IT Compliance at scale.
             </p>
           </div>
         </div>

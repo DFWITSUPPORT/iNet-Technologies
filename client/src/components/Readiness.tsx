@@ -32,10 +32,12 @@ export default function Readiness() {
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="mb-16 flex flex-col items-center text-center">
-          <span className="text-primary font-mono text-sm tracking-wider uppercase">Enterprise Service Packages</span>
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-sm font-medium mb-6">
+            <span className="text-primary font-bold tracking-wider uppercase">Phase 1: Enterprise AI Readiness</span>
+          </div>
           <h2 className="text-3xl md:text-5xl font-display font-bold mt-2 mb-4">We Prepare Complex Organizations for AI Deployment</h2>
           <p className="text-lg text-muted-foreground max-w-2xl">
-            Enterprises don't need more tools—they need clarity, alignment, and a unified data foundation.
+            Enterprises don't need more tools—they need clarity, alignment, and a unified data foundation before deploying AI agents.
           </p>
         </div>
 

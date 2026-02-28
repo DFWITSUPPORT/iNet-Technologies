@@ -59,12 +59,14 @@ export default function Navbar() {
             
             {/* Dropdown Menu */}
             <div className={`absolute top-full -left-4 pt-2 transition-all duration-200 origin-top ${isServicesOpen ? 'opacity-100 scale-y-100' : 'opacity-0 scale-y-0 pointer-events-none'}`}>
-              <div className="w-56 rounded-xl border border-white/10 bg-background/95 backdrop-blur-xl p-2 shadow-xl flex flex-col gap-1">
-                <button onClick={() => scrollToSection('readiness')} className="w-full text-left px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-white/5 rounded-lg transition-colors">AI Readiness</button>
-                <button onClick={() => scrollToSection('agents')} className="w-full text-left px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-white/5 rounded-lg transition-colors">Agent-as-a-Service</button>
+              <div className="w-64 rounded-xl border border-white/10 bg-background/95 backdrop-blur-xl p-2 shadow-xl flex flex-col gap-1">
+                <div className="px-3 py-1.5 text-xs font-bold text-muted-foreground uppercase tracking-wider">Small Business</div>
                 <Link href="/ai-employee">
-                  <span className="block px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-white/5 rounded-lg transition-colors cursor-pointer" onClick={() => setIsServicesOpen(false)}>AI Employee Setup</span>
+                  <span className="block px-3 py-2 text-sm text-foreground hover:bg-white/5 rounded-lg transition-colors cursor-pointer" onClick={() => setIsServicesOpen(false)}>AI Employee Setup</span>
                 </Link>
+                <div className="h-px bg-white/10 my-1"></div>
+                <div className="px-3 py-1.5 text-xs font-bold text-muted-foreground uppercase tracking-wider">Enterprise</div>
+                <button onClick={() => scrollToSection('enterprise-aaas')} className="w-full text-left px-3 py-2 text-sm text-foreground hover:bg-white/5 rounded-lg transition-colors">Agent-as-a-Service</button>
               </div>
             </div>
           </div>
@@ -93,11 +95,13 @@ export default function Navbar() {
           <div className="flex flex-col gap-1">
             <div className="text-sm font-bold text-foreground/50 uppercase tracking-wider px-2 py-2">Services</div>
             <div className="flex flex-col gap-1 border-l border-white/10 ml-3 pl-2">
-              <button onClick={() => scrollToSection('readiness')} className="text-sm font-medium p-2 hover:bg-white/5 rounded text-left text-muted-foreground hover:text-foreground">AI Readiness</button>
-              <button onClick={() => scrollToSection('agents')} className="text-sm font-medium p-2 hover:bg-white/5 rounded text-left text-muted-foreground hover:text-foreground">Agent-as-a-Service</button>
+              <div className="px-2 py-1 text-xs font-bold text-muted-foreground uppercase mt-1">Small Business</div>
               <Link href="/ai-employee">
-                <span className="text-sm font-medium p-2 hover:bg-white/5 rounded text-left block text-muted-foreground hover:text-foreground" onClick={() => setIsOpen(false)}>AI Employee Setup</span>
+                <span className="text-sm font-medium p-2 hover:bg-white/5 rounded text-left block text-foreground" onClick={() => setIsOpen(false)}>AI Employee Setup</span>
               </Link>
+              
+              <div className="px-2 py-1 text-xs font-bold text-muted-foreground uppercase mt-2">Enterprise</div>
+              <button onClick={() => scrollToSection('enterprise-aaas')} className="text-sm font-medium p-2 hover:bg-white/5 rounded text-left text-foreground">Agent-as-a-Service</button>
             </div>
           </div>
           <div className="h-px bg-white/5 my-1" />
