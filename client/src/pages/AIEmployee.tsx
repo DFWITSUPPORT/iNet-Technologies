@@ -97,18 +97,16 @@ export default function AIEmployee() {
           <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/10 to-transparent pointer-events-none" />
           <div className="container mx-auto px-4 md:px-6 relative z-10">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">Meet Your Perfect Employee</h2>
-              <p className="text-xl text-muted-foreground">It never sleeps, never takes days off, and has perfect memory.</p>
+              <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">Example Workflows</h2>
+              <p className="text-xl text-muted-foreground">High-value business functions automated by your new AI workforce.</p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
               {[
-                { icon: MessageSquare, title: "Instant Responses", desc: "Replies to every inquiry in seconds, keeping leads warm and engaged." },
-                { icon: Calendar, title: "Books Appointments", desc: "Integrates with your calendar to automatically schedule qualified prospects." },
-                { icon: Target, title: "Qualifies Leads", desc: "Asks the right questions to ensure you only speak with ideal customers." },
-                { icon: Zap, title: "Relentless Follow-up", desc: "Automatically chases unresponsive leads until they reply or opt out." },
-                { icon: BrainCircuit, title: "Knows Your Business", desc: "Trained entirely on your FAQs, website, and past successful interactions." },
-                { icon: BarChart, title: "Reports Everything", desc: "Logs every conversation to your CRM with a concise summary." },
+                { icon: BarChart, title: "Marketing", desc: "Search for daily market research on your products or industry to keep you ahead of the curve." },
+                { icon: Target, title: "Lead Generation", desc: "Notify the team of lead generation emails via Slack or similar communication channels instantly." },
+                { icon: MessageSquare, title: "Customer Support", desc: "Listen to social media for support issues to DM customers, and monitor/reply to the support inbox." },
+                { icon: Calendar, title: "Personal Assistant", desc: "Reviews your daily schedule and prepares a brief with background info on people you haven't met before." },
               ].map((feature, i) => (
                 <div key={i} className="p-8 rounded-2xl bg-background border border-white/10 hover:border-primary/50 transition-colors group">
                   <div className="w-14 h-14 rounded-xl bg-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
@@ -159,71 +157,56 @@ export default function AIEmployee() {
               <p className="text-xl text-muted-foreground">Hire a top-performing employee for a fraction of minimum wage.</p>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto items-center">
-              {/* Starter */}
-              <div className="p-8 rounded-3xl bg-background border border-white/10 shadow-xl">
-                <h3 className="text-2xl font-bold mb-2">Starter</h3>
-                <p className="text-muted-foreground mb-6">For small businesses needing basic coverage.</p>
-                <div className="mb-6">
-                  <span className="text-5xl font-black">$497</span>
-                  <span className="text-muted-foreground">/mo</span>
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto items-start">
+              {/* Starter Pack */}
+              <div className="p-8 rounded-3xl bg-background border border-white/10 shadow-xl flex flex-col h-full">
+                <h3 className="text-2xl font-bold mb-2">Starter Pack</h3>
+                <p className="text-muted-foreground mb-6">Essential setup to get your first agents working.</p>
+                <div className="mb-2">
+                  <span className="text-5xl font-black">$2,400</span>
+                  <span className="text-muted-foreground"> setup</span>
                 </div>
-                <ul className="space-y-4 mb-8">
-                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-primary" /><span>1 Channel (Web or SMS)</span></li>
-                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-primary" /><span>Basic FAQ Training</span></li>
-                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-primary" /><span>Lead Capture</span></li>
-                  <li className="flex items-center gap-3 opacity-50"><XCircle className="w-5 h-5" /><span>Calendar Integration</span></li>
-                  <li className="flex items-center gap-3 opacity-50"><XCircle className="w-5 h-5" /><span>CRM Sync</span></li>
+                <p className="text-sm text-primary font-medium mb-6">+ Optional $500/mo Support (4 hrs)</p>
+                
+                <div className="text-sm font-bold uppercase tracking-wider text-muted-foreground mb-4">Included in Setup:</div>
+                <ul className="space-y-4 mb-8 flex-grow">
+                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-primary" /><span>1 Clawbot Installation</span></li>
+                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-primary" /><span>1 Communication Channel (WhatsApp, Slack, etc.)</span></li>
+                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-primary" /><span>2 Tools / Skills</span></li>
+                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-primary" /><span>2 Workflows</span></li>
+                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-primary" /><span>2 Agents</span></li>
                 </ul>
                 <BookingModal>
-                  <button className="w-full h-12 rounded-xl bg-white/10 hover:bg-white/20 font-medium transition-colors">Select Starter</button>
+                  <button className="w-full h-12 rounded-xl bg-white/10 hover:bg-white/20 font-medium transition-colors mt-auto">Select Starter Pack</button>
                 </BookingModal>
               </div>
 
-              {/* Professional */}
-              <div className="p-8 rounded-3xl bg-gradient-to-b from-primary/20 to-background border border-primary relative transform md:-translate-y-4 shadow-[0_0_40px_rgba(37,99,235,0.2)]">
+              {/* Pro Pack */}
+              <div className="p-8 rounded-3xl bg-gradient-to-b from-primary/20 to-background border border-primary relative transform shadow-[0_0_40px_rgba(37,99,235,0.2)] flex flex-col h-full">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-primary-foreground text-sm font-bold px-4 py-1 rounded-full uppercase tracking-wider">
                   Most Popular
                 </div>
-                <h3 className="text-2xl font-bold mb-2">Professional</h3>
-                <p className="text-muted-foreground mb-6">Complete automation for growing teams.</p>
-                <div className="mb-6">
-                  <span className="text-5xl font-black">$997</span>
-                  <span className="text-muted-foreground">/mo</span>
+                <h3 className="text-2xl font-bold mb-2">Pro Pack</h3>
+                <p className="text-muted-foreground mb-6">Expanded capabilities for growing teams.</p>
+                <div className="mb-2">
+                  <span className="text-5xl font-black">$5,200</span>
+                  <span className="text-muted-foreground"> setup</span>
                 </div>
-                <ul className="space-y-4 mb-8">
-                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-primary" /><span>Up to 3 Channels</span></li>
-                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-primary" /><span>Advanced Sales Training</span></li>
-                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-primary" /><span>Direct Calendar Booking</span></li>
-                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-primary" /><span>Basic CRM Integration</span></li>
-                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-primary" /><span>Automated Follow-ups</span></li>
+                <p className="text-sm text-primary font-medium mb-6">+ Optional $700/mo Support (10 hrs)</p>
+                
+                <div className="text-sm font-bold uppercase tracking-wider text-muted-foreground mb-4">Included in Setup:</div>
+                <ul className="space-y-4 mb-8 flex-grow">
+                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-primary" /><span>1 Clawbot Installation</span></li>
+                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-primary" /><span>1 Communication Channel (WhatsApp, Slack, etc.)</span></li>
+                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-primary" /><span>4 Tools / Skills</span></li>
+                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-primary" /><span>5 Workflows</span></li>
+                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-primary" /><span>3 Agents</span></li>
                 </ul>
                 <BookingModal>
-                  <button className="w-full h-12 rounded-xl bg-primary text-primary-foreground font-bold hover:bg-primary/90 transition-colors shadow-lg">Select Professional</button>
-                </BookingModal>
-              </div>
-
-              {/* Elite */}
-              <div className="p-8 rounded-3xl bg-background border border-white/10 shadow-xl">
-                <h3 className="text-2xl font-bold mb-2">Elite</h3>
-                <p className="text-muted-foreground mb-6">Custom workflows for complex operations.</p>
-                <div className="mb-6">
-                  <span className="text-5xl font-black">$2,497</span>
-                  <span className="text-muted-foreground">/mo</span>
-                </div>
-                <ul className="space-y-4 mb-8">
-                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-primary" /><span>Unlimited Channels</span></li>
-                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-primary" /><span>Complex Multi-Step Flows</span></li>
-                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-primary" /><span>Custom API Integrations</span></li>
-                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-primary" /><span>Voice Calling Agent (Inbound)</span></li>
-                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-primary" /><span>Dedicated Support Rep</span></li>
-                </ul>
-                <BookingModal>
-                  <button className="w-full h-12 rounded-xl bg-white/10 hover:bg-white/20 font-medium transition-colors">Select Elite</button>
+                  <button className="w-full h-12 rounded-xl bg-primary text-primary-foreground font-bold hover:bg-primary/90 transition-colors shadow-lg mt-auto">Select Pro Pack</button>
                 </BookingModal>
               </div>
             </div>
-            <p className="text-center text-muted-foreground mt-8">*All tiers require a one-time $1,500 setup and training fee.</p>
           </div>
         </section>
 
