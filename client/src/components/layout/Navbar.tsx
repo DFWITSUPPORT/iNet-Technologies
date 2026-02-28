@@ -64,6 +64,9 @@ export default function Navbar() {
                 <Link href="/ai-employee">
                   <span className="block px-3 py-2 text-sm text-foreground hover:bg-white/5 rounded-lg transition-colors cursor-pointer" onClick={() => setIsServicesOpen(false)}>AI Employee Setup</span>
                 </Link>
+                <Link href="/features">
+                  <span className="block px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-white/5 rounded-lg transition-colors cursor-pointer ml-2" onClick={() => setIsServicesOpen(false)}>└ Features</span>
+                </Link>
                 <div className="h-px bg-white/10 my-1"></div>
                 <div className="px-3 py-1.5 text-xs font-bold text-muted-foreground uppercase tracking-wider">Enterprise</div>
                 <button onClick={() => scrollToSection('enterprise-aaas')} className="w-full text-left px-3 py-2 text-sm text-foreground hover:bg-white/5 rounded-lg transition-colors">Agent-as-a-Service</button>
@@ -71,9 +74,6 @@ export default function Navbar() {
             </div>
           </div>
           
-          <Link href="/features">
-            <span className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors cursor-pointer py-2">Features</span>
-          </Link>
           <button onClick={() => scrollToSection('process')} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors cursor-pointer py-2">Process</button>
           
           <BookingModal>
@@ -99,15 +99,15 @@ export default function Navbar() {
               <Link href="/ai-employee">
                 <span className="text-sm font-medium p-2 hover:bg-white/5 rounded text-left block text-foreground" onClick={() => setIsOpen(false)}>AI Employee Setup</span>
               </Link>
+              <Link href="/features">
+                <span className="text-sm font-medium p-2 hover:bg-white/5 rounded text-left block text-muted-foreground ml-2" onClick={() => setIsOpen(false)}>└ Features</span>
+              </Link>
               
               <div className="px-2 py-1 text-xs font-bold text-muted-foreground uppercase mt-2">Enterprise</div>
               <button onClick={() => scrollToSection('enterprise-aaas')} className="text-sm font-medium p-2 hover:bg-white/5 rounded text-left text-foreground">Agent-as-a-Service</button>
             </div>
           </div>
           <div className="h-px bg-white/5 my-1" />
-          <Link href="/features">
-            <span className="text-sm font-medium p-2 hover:bg-white/5 rounded text-left block" onClick={() => setIsOpen(false)}>Features</span>
-          </Link>
           <button onClick={() => scrollToSection('process')} className="text-sm font-medium p-2 hover:bg-white/5 rounded text-left">Process</button>
           
           <BookingModal>
