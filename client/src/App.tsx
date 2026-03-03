@@ -7,6 +7,8 @@ import { useEffect } from "react";
 import Home from "@/pages/Home";
 import AIEmployee from "@/pages/AIEmployee";
 import Features from "@/pages/Features";
+import PrivacyPolicy from "@/pages/PrivacyPolicy";
+import Terms from "@/pages/Terms";
 import NotFound from "@/pages/not-found";
 
 function ScrollToTop() {
@@ -25,6 +27,8 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/ai-employee" component={AIEmployee} />
       <Route path="/features" component={Features} />
+      <Route path="/privacy" component={PrivacyPolicy} />
+      <Route path="/terms" component={Terms} />
       <Route component={NotFound} />
     </Switch>
   );

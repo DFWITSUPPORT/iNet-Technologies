@@ -35,8 +35,8 @@ export default function Footer() {
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} iNet Technologies. All rights reserved.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-foreground">Terms</a>
-            <a href="#" className="hover:text-foreground">Privacy</a>
+            <a href="/terms" className="hover:text-foreground">Terms & EULA</a>
+            <a href="/privacy" className="hover:text-foreground">Privacy Policy</a>
           </div>
         </div>
       </div>
