@@ -1,10 +1,12 @@
+import logo from "@/assets/inet-logo-white.png";
+
 export default function Footer() {
   return (
     <footer className="py-12 border-t border-white/5 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           <div className="col-span-2">
-            <h3 className="font-display font-bold text-xl mb-4">iNet Technologies</h3>
+            <img src={logo} alt="iNet Technologies" className="w-44 h-auto object-contain mb-4" />
             <p className="text-muted-foreground max-w-sm mb-4">
               Enterprise Expertise. Executive Alignment. Real Transformation. We prepare complex organizations for AI deployment.
             </p>
