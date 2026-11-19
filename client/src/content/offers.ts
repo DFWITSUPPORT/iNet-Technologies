@@ -69,7 +69,7 @@ export const OFFERS: Record<OfferSlug, Offer> = {
     faqs: [
       {
         q: "Does Jobber sync with QuickBooks Online or Desktop?",
-        a: "Jobber offers a built-in QuickBooks Online sync. QuickBooks Desktop support is more limited and has changed over time, so check Jobber's current help docs for your edition. Either way, \"it syncs\" and \"it syncs the way your books need\" are different things. The usual gaps are job cost, deposits and duplicate customers.",
+        a: "Jobber syncs with QuickBooks Online only. QuickBooks Desktop isn't supported, and the sync runs one way: Jobber sends records to QuickBooks Online, nothing comes back. Either way, \"it syncs\" and \"it syncs the way your books need\" are different things. The usual gaps are job cost, deposits and duplicate customers.",
       },
       {
         q: "How do I sync Jobber with QuickBooks Online?",

@@ -28,7 +28,7 @@ const areaServed = STATES.map((s) => ({ "@type": "State", name: s.name }));
 
 function businessSchema() {
   return {
-    "@type": ["ProfessionalService", "LocalBusiness"],
+    "@type": "ProfessionalService",
     "@id": ORG_ID,
     name: SITE.name,
     url: SITE.url,
@@ -131,7 +131,7 @@ export const ROUTES: RouteMeta[] = [
   ),
   offerRoute(
     OFFERS.quickbooks,
-    "QuickBooks Integration for Contractors: Jobber, Housecall Pro & ServiceTitan Sync | iNet",
+    "QuickBooks Integration for Contractors | iNet Technologies",
     "QuickBooks for contractors, fixed. We repair Jobber, Housecall Pro and ServiceTitan QuickBooks integrations so jobs, payments and job cost post once, correctly.",
   ),
   offerRoute(
@@ -250,11 +250,11 @@ export function renderHeadTags(h: HeadData): string {
     .join("\n    ");
 }
 
-export function renderSitemap(lastmod: string): string {
+export function renderSitemap(): string {
   const urls = ROUTES.filter((r) => !r.noindex)
     .map(
       (r) =>
-        `  <url><loc>${SITE.url}${r.path === "/" ? "/" : r.path}</loc><lastmod>${lastmod}</lastmod><priority>${(r.priority ?? 0.5).toFixed(1)}</priority></url>`,
+        `  <url><loc>${SITE.url}${r.path === "/" ? "/" : r.path}</loc><priority>${(r.priority ?? 0.5).toFixed(1)}</priority></url>`,
     )
     .join("\n");
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;

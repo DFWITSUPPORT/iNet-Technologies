@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Menu, X, ChevronDown } from "lucide-react";
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useId, useRef, useState, type KeyboardEvent } from "react";
 import BookingModal from "@/components/BookingModal";
 import logo from "@/assets/inet-gear-logo-white.svg";
 import { OFFERS } from "@/content/offers";
@@ -46,6 +46,8 @@ const GROUPS: NavGroup[] = [
 function Dropdown({ group }: { group: NavGroup }) {
   const [open, setOpen] = useState(false);
   const timeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const menuId = useId();
   const show = useCallback(() => {
     if (timeout.current) clearTimeout(timeout.current);
     setOpen(true);
@@ -54,11 +56,22 @@ function Dropdown({ group }: { group: NavGroup }) {
     timeout.current = setTimeout(() => setOpen(false), 150);
   }, []);
 
+  const onKeyDown = useCallback((e: KeyboardEvent) => {
+    if (e.key === "Escape") {
+      if (timeout.current) clearTimeout(timeout.current);
+      setOpen(false);
+      buttonRef.current?.focus();
+    }
+  }, []);
+
   return (
-    <div className="relative" onMouseEnter={show} onMouseLeave={hide} onFocus={show} onBlur={hide}>
+    <div className="relative" onMouseEnter={show} onMouseLeave={hide} onBlur={hide} onKeyDown={onKeyDown}>
       <button
+        ref={buttonRef}
         type="button"
         aria-expanded={open}
+        aria-controls={menuId}
+        onFocus={() => timeout.current && clearTimeout(timeout.current)}
         onClick={() => setOpen((o) => !o)}
         className="flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors cursor-pointer py-2"
       >
@@ -66,8 +79,10 @@ function Dropdown({ group }: { group: NavGroup }) {
         <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
       </button>
       <div
+        id={menuId}
+        onFocus={show}
         className={`absolute top-full -left-4 pt-2 transition-all duration-200 origin-top ${
-          open ? "opacity-100 scale-y-100" : "opacity-0 scale-y-0 pointer-events-none"
+          open ? "visible opacity-100 scale-y-100" : "invisible opacity-0 scale-y-0 pointer-events-none"
         }`}
       >
         <div className="w-72 rounded-xl border border-white/10 bg-background/95 backdrop-blur-xl p-2 shadow-xl flex flex-col gap-1">

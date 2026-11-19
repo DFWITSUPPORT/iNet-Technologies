@@ -18,7 +18,7 @@ interface ServerEntry {
   render(url: string): { html: string; head: string };
   routePaths: string[];
   notFoundPath: string;
-  renderSitemap(lastmod: string): string;
+  renderSitemap(): string;
 }
 
 export async function prerender() {
@@ -68,8 +68,7 @@ export async function prerender() {
   }
   await out("404.html", page(entry.notFoundPath));
 
-  const today = new Date().toISOString().slice(0, 10);
-  await out("sitemap.xml", entry.renderSitemap(today));
+  await out("sitemap.xml", entry.renderSitemap());
 
   await rm(SSR_DIR, { recursive: true, force: true });
   console.log(`prerendered ${written.length} files:\n  ${written.join("\n  ")}`);

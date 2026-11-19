@@ -27,7 +27,7 @@ export function buildLeadMailto(lead: LeadRequest): string {
     `Email: ${lead.email}`,
     `Trade: ${lead.trade}`,
     `State: ${lead.state}`,
-  ].join("\n");
+  ].join("\r\n"); // RFC 6068: mailto bodies use CRLF line breaks
   return `mailto:${SITE.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
 

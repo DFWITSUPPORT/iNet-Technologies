@@ -30,6 +30,6 @@ export const TRADES = ["HVAC", "Plumbing", "Electrical", "Restoration"] as const
  * 3x savings guarantee: NOT approved by Tim yet.
  * Flip to false to remove every guarantee mention from the site (copy + nothing else references it).
  */
-export const SHOW_GUARANTEE = true;
+export const SHOW_GUARANTEE = false;
 export const GUARANTEE_TEXT =
   "If the audit doesn't find savings of at least 3× the fee, the audit is free.";

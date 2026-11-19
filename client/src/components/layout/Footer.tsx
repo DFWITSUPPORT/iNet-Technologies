@@ -27,7 +27,7 @@ export default function Footer() {
             </address>
           </div>
           <div>
-            <h4 className="font-bold mb-4">Services</h4>
+            <h2 className="text-base font-bold mb-4">Services</h2>
             <ul className="space-y-2 text-sm text-muted-foreground">
               {Object.values(OFFERS).map((o) => (
                 <li key={o.slug}>
@@ -38,7 +38,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="font-bold mb-4">Free guides</h4>
+            <h2 className="text-base font-bold mb-4">Free guides</h2>
             <ul className="space-y-2 text-sm text-muted-foreground">
               {MAGNET_LIST.map((m) => (
                 <li key={m.slug}>
@@ -48,7 +48,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="font-bold mb-4">Who we serve</h4>
+            <h2 className="text-base font-bold mb-4">Who we serve</h2>
             <p className="text-sm text-muted-foreground mb-3">
               HVAC, plumbing, electrical and restoration contractors.
             </p>
@@ -56,7 +56,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} {SITE.name}. All rights reserved.</p>
+          <p suppressHydrationWarning>&copy; {new Date().getFullYear()} {SITE.name}. All rights reserved.</p>
           <div className="flex gap-6">
             <Link href="/terms" className="hover:text-foreground">Terms & EULA</Link>
             <Link href="/privacy" className="hover:text-foreground">Privacy Policy</Link>
