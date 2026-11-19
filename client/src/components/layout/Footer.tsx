@@ -1,44 +1,65 @@
-import logo from "@/assets/inet-logo-white.png";
+import { Link } from "wouter";
+import logo from "@/assets/inet-gear-logo-white.svg";
+import { SITE, STATES_SENTENCE } from "@/lib/site";
+import { OFFERS } from "@/content/offers";
+import { MAGNET_LIST } from "@/content/magnets";
 
 export default function Footer() {
   return (
     <footer className="py-12 border-t border-white/5 bg-background">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid md:grid-cols-4 gap-8 mb-12">
-          <div className="col-span-2">
-            <img src={logo} alt="iNet Technologies" className="w-44 h-auto object-contain mb-4" />
-            <p className="text-muted-foreground max-w-sm mb-4">
-              Enterprise Expertise. Executive Alignment. Real Transformation. We prepare complex organizations for AI deployment.
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+          <div>
+            <img src={logo} alt="iNet Technologies" width={166} height={64} className="h-12 w-auto mb-4" />
+            <p className="text-sm text-muted-foreground mb-4">
+              We find where your business loses time and money, fix the process, and embed AI where it
+              pays off.
             </p>
-            <div className="text-sm text-muted-foreground">
-              <p className="font-medium text-foreground">Tim Wilson</p>
-              <p>tim@dfwitexpert.com</p>
-            </div>
+            <address className="not-italic text-sm text-muted-foreground space-y-1">
+              <p className="text-foreground font-medium">{SITE.name}</p>
+              <p>{SITE.city}, {SITE.region}</p>
+              <p>
+                <a href={`mailto:${SITE.email}`} className="hover:text-foreground">{SITE.email}</a>
+              </p>
+              <p>
+                <a href={`tel:${SITE.phoneE164}`} className="hover:text-foreground">{SITE.phone}</a>
+              </p>
+            </address>
           </div>
           <div>
-            <h4 className="font-bold mb-4">Enterprise Services</h4>
+            <h4 className="font-bold mb-4">Services</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#readiness" className="hover:text-primary transition-colors">Readiness Assessment</a></li>
-              <li><a href="#readiness" className="hover:text-primary transition-colors">Data Foundation</a></li>
-              <li><a href="#agents" className="hover:text-primary transition-colors">Agent-as-a-Service</a></li>
-              <li><a href="#process" className="hover:text-primary transition-colors">Implementation Process</a></li>
+              {Object.values(OFFERS).map((o) => (
+                <li key={o.slug}>
+                  <Link href={o.path} className="hover:text-accent transition-colors">{o.name.replace(" for Field-Service Contractors", "")}</Link>
+                </li>
+              ))}
+              <li><Link href="/ai-employee" className="hover:text-accent transition-colors">AI Employee Setup</Link></li>
             </ul>
           </div>
           <div>
-            <h4 className="font-bold mb-4">Industries Served</h4>
+            <h4 className="font-bold mb-4">Free guides</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><span className="hover:text-primary transition-colors cursor-default">Construction & Logistics</span></li>
-              <li><span className="hover:text-primary transition-colors cursor-default">Manufacturing</span></li>
-              <li><span className="hover:text-primary transition-colors cursor-default">Healthcare</span></li>
-              <li><span className="hover:text-primary transition-colors cursor-default">Professional Services</span></li>
+              {MAGNET_LIST.map((m) => (
+                <li key={m.slug}>
+                  <Link href={m.path} className="hover:text-accent transition-colors">{m.shortTitle}</Link>
+                </li>
+              ))}
             </ul>
+          </div>
+          <div>
+            <h4 className="font-bold mb-4">Who we serve</h4>
+            <p className="text-sm text-muted-foreground mb-3">
+              HVAC, plumbing, electrical and restoration contractors.
+            </p>
+            <p className="text-sm text-muted-foreground">Service area: {STATES_SENTENCE}.</p>
           </div>
         </div>
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} iNet Technologies. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} {SITE.name}. All rights reserved.</p>
           <div className="flex gap-6">
-            <a href="/terms" className="hover:text-foreground">Terms & EULA</a>
-            <a href="/privacy" className="hover:text-foreground">Privacy Policy</a>
+            <Link href="/terms" className="hover:text-foreground">Terms & EULA</Link>
+            <Link href="/privacy" className="hover:text-foreground">Privacy Policy</Link>
           </div>
         </div>
       </div>
