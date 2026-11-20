@@ -1,6 +1,7 @@
 import { SITE, STATES } from "./site";
 import { OFFERS, type Faq, type Offer } from "@/content/offers";
 import { MAGNETS, type Magnet } from "@/content/magnets";
+import { HOME_FAQS } from "@/content/home";
 
 export interface RouteMeta {
   path: string;
@@ -120,11 +121,11 @@ const magnetRoute = (m: Magnet, title: string, description: string): RouteMeta =
 export const ROUTES: RouteMeta[] = [
   {
     path: "/",
-    title: "The Six-Figure Leak Audit for Field-Service Contractors | iNet Technologies",
+    title: "Field Service Software & QuickBooks Integration | iNet",
     description:
-      "HVAC, plumbing, electrical and restoration contractors: find the money leaking between your field service software, QuickBooks and job costing.",
+      "New software or better integration? HVAC, plumbing, electrical and restoration contractors: find the leaks between field software, ERP and QuickBooks first.",
     priority: 1.0,
-    jsonLd: [serviceSchema(OFFERS["leak-audit"])],
+    jsonLd: [serviceSchema(OFFERS["leak-audit"]), faqSchema(HOME_FAQS)],
   },
   offerRoute(
     OFFERS["leak-audit"],

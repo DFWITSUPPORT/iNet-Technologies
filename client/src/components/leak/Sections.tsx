@@ -282,12 +282,20 @@ export function MagnetCards({ title = "Start with a free guide" }: { title?: str
   );
 }
 
-export function OfferCards({ offers, title }: { offers: Offer[]; title: string }) {
+export function OfferCards({
+  offers,
+  title,
+  eyebrow = "Focused audits",
+}: {
+  offers: Offer[];
+  title: string;
+  eyebrow?: string;
+}) {
   return (
     <section className="py-20 md:py-24 bg-card/30 border-y border-white/5">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mb-12">
-          <Eyebrow>Focused audits</Eyebrow>
+          <Eyebrow>{eyebrow}</Eyebrow>
           <h2 className="text-3xl md:text-5xl font-display font-bold">{title}</h2>
         </div>
         <div className="grid md:grid-cols-3 gap-5">
