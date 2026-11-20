@@ -40,14 +40,16 @@ export default function PrivacyPolicy() {
 
             <h2 className="text-2xl font-bold mt-10 mb-4">4. AI Agent Services</h2>
             <p className="text-muted-foreground mb-6">
-              When utilizing our Agent-as-a-Service or AI Employee setup, our systems may process data on your behalf. We act as a data processor in these scenarios. You retain full ownership and control over any data fed into these systems. We do not use your proprietary business data to train foundational models outside of your isolated, secure tenant.
+              When using our Agent-as-a-Service or AI Employee setup, our systems may process data on your behalf. We act as a data processor in these scenarios. You retain full ownership and control over any data fed into these systems. We do not use your proprietary business data to train foundational models outside of your isolated, secure tenant.
             </p>
 
             <h2 className="text-2xl font-bold mt-10 mb-4">5. Contact Us</h2>
             <p className="text-muted-foreground mb-6">
               If you have any questions about this privacy policy or our privacy practices, please contact us at:<br /><br />
               <strong>iNet Technologies</strong><br />
-              Email: tim@dfwitexpert.com
+              Email: support@inet-technologies.com<br />
+              Phone: 817-769-2202<br />
+              Fort Worth, TX
             </p>
           </div>
         </div>

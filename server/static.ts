@@ -10,10 +10,22 @@ export function serveStatic(app: Express) {
     );
   }
 
-  app.use(express.static(distPath));
+  // Clean URLs: every route is prerendered to <route>.html (script/prerender.ts). Serve it for
+  // /route and /route/ directly, without serve-static's 301 to the /route/ directory.
+  app.use((req, res, next) => {
+    if (req.method !== "GET" && req.method !== "HEAD") return next();
+    const clean = req.path.replace(/\/+$/, "");
+    if (!clean || path.extname(clean)) return next();
+    const rel = `${clean.slice(1)}.html`;
+    if (rel.includes("..") || !fs.existsSync(path.join(distPath, rel))) return next();
+    // `root` keeps send's dotfile check off the absolute path (e.g. a parent dir like ~/.openclaw).
+    res.sendFile(rel, { root: distPath });
+  });
 
-  // fall through to index.html if the file doesn't exist
+  app.use(express.static(distPath, { redirect: false }));
+
+  // Anything else is a genuine 404.
   app.use("/{*path}", (_req, res) => {
-    res.sendFile(path.resolve(distPath, "index.html"));
+    res.status(404).sendFile("404.html", { root: distPath });
   });
 }

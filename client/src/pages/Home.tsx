@@ -1,55 +1,55 @@
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-import Hero from "@/components/Hero";
-import Experience from "@/components/Experience";
-import CaseStudies from "@/components/CaseStudies";
-import Problem from "@/components/Problem";
-import Readiness from "@/components/Readiness";
-import Agents from "@/components/Agents";
-import Process from "@/components/Process";
-import BookingModal from "@/components/BookingModal";
+import { CalendarClock, Clock, GitMerge, GraduationCap, Calculator, Puzzle } from "lucide-react";
+import PageLayout from "@/components/layout/PageLayout";
+import { FinalCta, PageHero } from "@/components/leak/Heroes";
+import { AuditSteps, FaqSection, LeakGrid, OfferCards, Proof, ServiceArea } from "@/components/leak/Sections";
+import { OFFERS } from "@/content/offers";
+import { HOME_FAQS } from "@/content/home";
 
+// Layout mirrors /construction-erp-vs-integration (Tim's pick, 2026-11-20).
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background text-foreground selection:bg-primary/20">
-      <Navbar />
-      <main>
-        <Hero />
-        <Experience />
-        <CaseStudies />
-        <Problem />
-        
-        {/* Enterprise AaaS Section (Includes Readiness + Agents) */}
-        <div id="enterprise-aaas">
-          <Readiness />
-          <div id="process">
-            <Process />
-          </div>
-          <Agents />
-        </div>
-        
-        {/* CTA Section */}
-        <section className="py-24 relative overflow-hidden">
-          <div className="absolute inset-0 bg-primary/10"></div>
-          <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
-            <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">Ready to upgrade your workforce?</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
-              Start with a readiness audit to see where you stand, or schedule a demo of our agents in action.
+    <PageLayout>
+      <PageHero
+        eyebrow="The Six-Figure Leak Audit for field-service contractors"
+        h1="New software or better integration? Get the answer before the demos."
+        intro={
+          <>
+            <p>
+              Field service software, construction ERP and QuickBooks each do their job. The money
+              leaks between them: jobs re-typed, change orders never billed, job cost nobody trusts.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <BookingModal>
-                <button className="h-14 px-8 rounded-full bg-primary text-primary-foreground font-bold text-lg hover:bg-primary/90 transition-all shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5 cursor-pointer">
-                  Book a Free Consultation
-                </button>
-              </BookingModal>
-              <button className="h-14 px-8 rounded-full bg-card border border-white/10 text-foreground font-medium text-lg hover:bg-white/5 transition-all cursor-pointer">
-                View Pricing Details
-              </button>
-            </div>
-          </div>
-        </section>
-      </main>
-      <Footer />
-    </div>
+            <p className="text-base">
+              We find those leaks for HVAC, plumbing, electrical and restoration contractors, then tell
+              you whether to fix, connect or replace. Founder-led, 20+ years, vendor-neutral. Nothing
+              to resell.
+            </p>
+          </>
+        }
+        magnet="checklist"
+      />
+      <LeakGrid
+        eyebrow="Fix, connect or replace?"
+        title="What we weigh before you buy anything"
+        intro="We score your situation on the things that decide whether you need new software or better integration."
+        leaks={[
+          { icon: GitMerge, title: "Where re-keying happens", desc: "Every place a job gets typed twice: field app to QuickBooks, estimate to work order, tech hours to a timesheet spreadsheet." },
+          { icon: Calculator, title: "Job cost you can trust", desc: "Do materials, labor and change orders land on the right job, or do you find out which jobs lost money months later?" },
+          { icon: CalendarClock, title: "Dispatch ↔ accounting handoffs", desc: "Does what got scheduled and done match what got billed, without someone checking both systems?" },
+          { icon: Clock, title: "Implementation time", desc: "An honest estimate of months-to-value for each path: fix the mapping, build a connector, or migrate." },
+          { icon: GraduationCap, title: "Retraining cost", desc: "Every new system means retraining the office and the field. We count that cost before you sign." },
+          { icon: Puzzle, title: "What you keep", desc: "Which of your current tools are worth keeping and connecting, and which are holding you back." },
+        ]}
+      />
+      <AuditSteps />
+      <Proof />
+      <FaqSection faqs={HOME_FAQS} title="Questions contractors ask" />
+      <OfferCards
+        eyebrow="Pick your starting point"
+        title="Start where it hurts."
+        offers={[OFFERS["leak-audit"], OFFERS.quickbooks, OFFERS["field-service"], OFFERS.erp, OFFERS["law-firms"]]}
+      />
+      <FinalCta magnet="checklist" showGuides />
+      <ServiceArea />
+    </PageLayout>
   );
 }

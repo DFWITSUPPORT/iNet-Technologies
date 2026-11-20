@@ -17,8 +17,9 @@
   --color-popover: hsl(222 47% 11%);
   --color-popover-foreground: hsl(210 40% 98%);
   
-  --color-primary: hsl(217 91% 60%);
-  --color-primary-foreground: hsl(210 40% 98%);
+  /* Brand blue #1E6FD9 (gear logo). Use for fills/buttons; use accent for small text on dark. */
+  --color-primary: #1e6fd9;
+  --color-primary-foreground: hsl(0 0% 100%);
   
   --color-secondary: hsl(217 32% 17%);
   --color-secondary-foreground: hsl(210 40% 98%);
@@ -26,7 +27,8 @@
   --color-muted: hsl(217 32% 17%);
   --color-muted-foreground: hsl(215 20% 65%);
   
-  --color-accent: hsl(190 90% 50%);
+  /* Light tint of the brand blue: readable (>4.5:1) as small text on the dark background. */
+  --color-accent: #6aa5f2;
   --color-accent-foreground: hsl(222 47% 11%);
   
   --color-destructive: hsl(0 62% 30%);
@@ -34,7 +36,7 @@
   
   --color-border: hsl(217 32% 22%);
   --color-input: hsl(217 32% 22%);
-  --color-ring: hsl(224 76% 48%);
+  --color-ring: #6aa5f2;
   
   --radius-lg: 0.75rem;
   --radius-md: 0.5rem;
@@ -70,7 +72,7 @@
 
 @layer utilities {
   .text-glow {
-    text-shadow: 0 0 20px hsla(217, 91%, 60%, 0.5);
+    text-shadow: 0 0 20px rgb(30 111 217 / 0.5);
   }
   
   .glass-card {
