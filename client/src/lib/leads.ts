@@ -5,6 +5,8 @@ export interface LeadRequest {
   company: string;
   email: string;
   trade: string;
+  /** Label for the segment field ("Trade" for contractors, "Firm size" for law firms). */
+  tradeLabel?: string;
   state: string;
   /** What they asked for, e.g. the lead magnet title or "Leak Audit request". */
   request: string;
@@ -25,7 +27,7 @@ export function buildLeadMailto(lead: LeadRequest): string {
     `Name: ${lead.name}`,
     `Company: ${lead.company}`,
     `Email: ${lead.email}`,
-    `Trade: ${lead.trade}`,
+    `${lead.tradeLabel ?? "Trade"}: ${lead.trade}`,
     `State: ${lead.state}`,
   ].join("\r\n"); // RFC 6068: mailto bodies use CRLF line breaks
   return `mailto:${SITE.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;

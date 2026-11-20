@@ -14,6 +14,7 @@ import LeakAudit from "@/pages/LeakAudit";
 import QuickBooksIntegration from "@/pages/QuickBooksIntegration";
 import FieldServiceAudit from "@/pages/FieldServiceAudit";
 import ConstructionErp from "@/pages/ConstructionErp";
+import LawFirms from "@/pages/LawFirms";
 import MagnetPage from "@/pages/MagnetPage";
 import NotFound from "@/pages/not-found";
 import { OFFERS } from "@/content/offers";
@@ -41,6 +42,7 @@ export function AppRoutes() {
       <Route path={OFFERS.quickbooks.path} component={QuickBooksIntegration} />
       <Route path={OFFERS["field-service"].path} component={FieldServiceAudit} />
       <Route path={OFFERS.erp.path} component={ConstructionErp} />
+      <Route path={OFFERS["law-firms"].path} component={LawFirms} />
       <Route path={MAGNETS.checklist.path}>{() => <MagnetPage slug="checklist" />}</Route>
       <Route path={MAGNETS.compare.path}>{() => <MagnetPage slug="compare" />}</Route>
       <Route path={MAGNETS.sync.path}>{() => <MagnetPage slug="sync" />}</Route>

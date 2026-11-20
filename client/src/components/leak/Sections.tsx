@@ -207,19 +207,17 @@ export function AuditIncluded() {
   );
 }
 
-export function Proof() {
+export function Proof({
+  title = "We've found these leaks before.",
+  intro = "Founder-led. More than 20 years building databases, ERP, CRM and integrations. We work with the systems you already have. No rip-and-replace.",
+}: { title?: string; intro?: string }) {
   return (
     <section className="py-20 md:py-24 bg-card/30 border-y border-white/5">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mb-12">
           <Eyebrow>Proof</Eyebrow>
-          <h2 className="text-3xl md:text-5xl font-display font-bold mb-5">
-            We've found these leaks before.
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            Founder-led. More than 20 years building databases, ERP, CRM and integrations. We work
-            with the systems you already have. No rip-and-replace.
-          </p>
+          <h2 className="text-3xl md:text-5xl font-display font-bold mb-5">{title}</h2>
+          <p className="text-lg text-muted-foreground">{intro}</p>
         </div>
         <div className="grid md:grid-cols-3 gap-5">
           <div className="p-7 rounded-2xl bg-background border border-primary/40 md:col-span-2">
@@ -337,7 +335,7 @@ export function FaqSection({ faqs, title = "Questions contractors ask" }: { faqs
   );
 }
 
-export function ServiceArea() {
+export function ServiceArea({ who = "field-service contractors" }: { who?: string }) {
   return (
     <section className="py-16 bg-background border-t border-white/5">
       <div className="container mx-auto px-4 md:px-6 flex flex-col md:flex-row md:items-center gap-6 md:gap-12">
@@ -346,7 +344,7 @@ export function ServiceArea() {
           <h2 className="text-xl font-display font-bold">Where we work</h2>
         </div>
         <p className="text-muted-foreground">
-          Based in {SITE.city}, Texas. We work with field-service contractors across {STATES_SENTENCE},
+          Based in {SITE.city}, Texas. We work with {who} across {STATES_SENTENCE},
           remotely and on site in DFW.
         </p>
         <ul className="flex flex-wrap gap-2 md:ml-auto" aria-label="States served">

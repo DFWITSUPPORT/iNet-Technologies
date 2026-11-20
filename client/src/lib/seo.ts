@@ -54,6 +54,8 @@ function businessSchema() {
       "Dispatch and scheduling",
       "Data entry automation",
       "AI for contractors",
+      "AI for law firms",
+      "Legal practice management integration",
     ],
     makesOffer: Object.values(OFFERS).map((o) => ({
       "@type": "Offer",
@@ -73,7 +75,7 @@ function serviceSchema(o: Offer) {
     areaServed,
     audience: {
       "@type": "BusinessAudience",
-      audienceType: "HVAC, plumbing, electrical and restoration contractors",
+      audienceType: o.audience ?? "HVAC, plumbing, electrical and restoration contractors",
     },
   };
 }
@@ -144,6 +146,14 @@ export const ROUTES: RouteMeta[] = [
     "Construction ERP Software vs Integration: ERP Reality Check | iNet Technologies",
     "Shopping for construction ERP software? Find out first whether you need an ERP or need your current field, estimating and accounting systems connected.",
   ),
+  {
+    path: OFFERS["law-firms"].path,
+    title: "AI for Law Firms | Systems Integration & AI Workflows | iNet",
+    description:
+      "AI readiness, systems integration and governed AI workflows for small and midsize law firms. Connect practice management, documents and billing. Fort Worth, TX.",
+    priority: 0.9,
+    jsonLd: [serviceSchema(OFFERS["law-firms"]), faqSchema(OFFERS["law-firms"].faqs)],
+  },
   magnetRoute(
     MAGNETS.checklist,
     "Texas Field-Service Leak Checklist: 10 Places Jobs Get Re-Typed | iNet",

@@ -6,7 +6,7 @@ export interface Faq {
   a: string;
 }
 
-export type OfferSlug = "leak-audit" | "quickbooks" | "field-service" | "erp";
+export type OfferSlug = "leak-audit" | "quickbooks" | "field-service" | "erp" | "law-firms";
 
 export interface Offer {
   slug: OfferSlug;
@@ -14,7 +14,9 @@ export interface Offer {
   name: string;
   /** One line for cards and schema. */
   summary: string;
-  magnet: MagnetSlug;
+  magnet?: MagnetSlug;
+  /** schema.org audienceType; defaults to field-service contractors. */
+  audience?: string;
   faqs: Faq[];
 }
 
@@ -146,6 +148,32 @@ export const OFFERS: Record<OfferSlug, Offer> = {
       {
         q: "We already have an ERP. Can you help?",
         a: "Yes. We've built custom CRM, estimating and reporting systems on top of an existing ERP (including Sage 300). Most ERP pain is the edges: what gets into it and what you can get out.",
+      },
+    ],
+  },
+  "law-firms": {
+    slug: "law-firms",
+    path: "/law-firms",
+    name: "AI and Systems Integration for Law Firms",
+    summary:
+      "An AI readiness and leak review for small and midsize law firms, then the integrations and governed AI workflows that pay back, with lawyers reviewing every output.",
+    audience: "Small and midsize law firms",
+    faqs: [
+      {
+        q: "Is it safe to use AI with client confidential data?",
+        a: "It can be, if it's set up for it. That means business or enterprise AI plans that don't train on your data, access controls that follow your matter permissions, logging, and private deployment where the risk calls for it. Some clients restrict AI on their matters, so check engagement terms and outside counsel guidelines. Your professional obligations are yours to judge. We build and document the technical controls so you can.",
+      },
+      {
+        q: "Do we need a legal-specific AI tool?",
+        a: "Not for everything. Legal-specific tools are strong for research and drafting against legal sources. Summarizing, intake, time entry and internal operations often run well on general-purpose AI with the right governance. We don't sell or resell AI tools, so we help you pick what fits each workflow and connect it to the systems you already use.",
+      },
+      {
+        q: "Will AI reduce our billable hours?",
+        a: "The large firms in Harvey's 2026 study are split. Asked about the next year, 47% expect no change, 30% expect AI to reduce billable hours and 13% expect an increase. 90% are reassessing the billable-hour model. For a smaller firm, the quickest win is often non-billable: intake, time capture, billing and reporting, which frees lawyer time without touching how you price.",
+      },
+      {
+        q: "Where should a small firm start?",
+        a: "With a readiness review, not a tool purchase. Map how a matter moves from intake to final bill, find where time leaks and where data isn't ready for AI, then pick one or two governed workflows such as intake or document summaries. Measure the time saved before expanding.",
       },
     ],
   },

@@ -32,9 +32,14 @@ export default function Home() {
             embed AI where it pays off. Small businesses can start with an AI employee that answers
             and books 24/7.
           </p>
-          <Link href="/ai-employee" className="inline-flex items-center gap-1 font-semibold text-accent hover:underline underline-offset-4">
-            See AI Employee Setup <ArrowRight className="w-4 h-4" />
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center">
+            <Link href="/law-firms" className="inline-flex items-center justify-center gap-1 font-semibold text-accent hover:underline underline-offset-4">
+              AI for law firms <ArrowRight className="w-4 h-4" />
+            </Link>
+            <Link href="/ai-employee" className="inline-flex items-center justify-center gap-1 font-semibold text-accent hover:underline underline-offset-4">
+              See AI Employee Setup <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
       </section>
 

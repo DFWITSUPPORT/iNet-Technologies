@@ -50,7 +50,8 @@ export default function Footer() {
           <div>
             <h2 className="text-base font-bold mb-4">Who we serve</h2>
             <p className="text-sm text-muted-foreground mb-3">
-              HVAC, plumbing, electrical and restoration contractors.
+              HVAC, plumbing, electrical and restoration contractors, and small and midsize{" "}
+              <Link href="/law-firms" className="hover:text-accent transition-colors">law firms</Link>.
             </p>
             <p className="text-sm text-muted-foreground">Service area: {STATES_SENTENCE}.</p>
           </div>

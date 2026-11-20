@@ -29,6 +29,10 @@ const GROUPS: NavGroup[] = [
         ],
       },
       {
+        heading: "Law firms",
+        items: [{ href: OFFERS["law-firms"].path, label: "AI & Integration for Law Firms" }],
+      },
+      {
         heading: "Small business",
         items: [
           { href: "/ai-employee", label: "AI Employee Setup" },

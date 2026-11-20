@@ -10,7 +10,11 @@ interface LeadFormProps {
   request: string;
   keyword: string;
   buttonLabel: string;
+  /** Segment dropdown; defaults to contractor trades. */
+  segment?: { label: string; options: readonly string[] };
 }
+
+const DEFAULT_SEGMENT = { label: "Trade", options: [...TRADES, "Other"] } as const;
 
 const selectClass =
   "flex h-11 w-full rounded-md border border-input bg-background px-3 text-base md:text-sm focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring";
@@ -51,7 +55,7 @@ export function CopyEmail({ keyword }: { keyword: string }) {
   );
 }
 
-export default function LeadForm({ request, keyword, buttonLabel }: LeadFormProps) {
+export default function LeadForm({ request, keyword, buttonLabel, segment = DEFAULT_SEGMENT }: LeadFormProps) {
   const [sent, setSent] = useState(false);
 
   const onSubmit = useCallback(
@@ -64,13 +68,14 @@ export default function LeadForm({ request, keyword, buttonLabel }: LeadFormProp
         company: get("company"),
         email: get("email"),
         trade: get("trade"),
+        tradeLabel: segment.label,
         state: get("state"),
         request,
         keyword,
       });
       setSent(true);
     },
-    [request, keyword],
+    [request, keyword, segment.label],
   );
 
   return (
@@ -89,15 +94,14 @@ export default function LeadForm({ request, keyword, buttonLabel }: LeadFormProp
           <Input id="lf-email" name="email" type="email" required autoComplete="email" className="h-11" />
         </div>
         <div className="space-y-1.5">
-          <Label htmlFor="lf-trade">Trade</Label>
+          <Label htmlFor="lf-trade">{segment.label}</Label>
           <select id="lf-trade" name="trade" required defaultValue="" className={selectClass}>
             <option value="" disabled>
               Select…
             </option>
-            {TRADES.map((t) => (
+            {segment.options.map((t) => (
               <option key={t}>{t}</option>
             ))}
-            <option>Other</option>
           </select>
         </div>
         <div className="space-y-1.5">
